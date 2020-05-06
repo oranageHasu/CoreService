@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CoreService.Models.AWS_Cognito_System
 {
-    class CognitoLogin
+    public class CognitoLogin
     {
         [StringLength(50)]
         [JsonProperty("userName")]
