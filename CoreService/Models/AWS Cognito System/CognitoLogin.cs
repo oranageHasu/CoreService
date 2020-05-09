@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CoreService.Models.AWS_Cognito_System
 {
@@ -16,10 +17,17 @@ namespace CoreService.Models.AWS_Cognito_System
 
         [StringLength(50)]
         [JsonProperty("newPassword")]
+        [NotMapped]
         public String NewPassword { get; set; }
 
         [JsonProperty("exceededAttempts")]
+        [NotMapped]
         public bool ExceededAttempts { get; set; }
+
+        [StringLength(50)]
+        [JsonProperty("jwtToken")]
+        [NotMapped]
+        public String JwtToken { get; set; }
 
     }
 }
